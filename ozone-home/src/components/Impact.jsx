@@ -39,11 +39,11 @@ export default function Impact() {
             
             <div className="flex space-x-12">
               <div>
-                <div className="text-emerald-400 text-4xl font-bold mb-1">12,512</div>
+                <div className="text-emerald-400 text-4xl font-bold mb-1">12,496</div>
                 <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase">Appliances Reused</div>
               </div>
               <div>
-                <div className="text-emerald-400 text-4xl font-bold mb-1">4.5M</div>
+                <div className="text-emerald-400 text-4xl font-bold mb-1">4.3M</div>
                 <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase">Lbs Waste Reduced</div>
               </div>
             </div>

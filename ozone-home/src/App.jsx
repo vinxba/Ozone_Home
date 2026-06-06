@@ -7,6 +7,7 @@ import Categories from './components/Categories';
 import BestDeals from './components/BestDeals';
 import Impact from './components/Impact';
 import FooterCTA from './components/FooterCTA';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <BestDeals />
       <Impact />
       <FooterCTA />
+      <Footer />
     </div>
   );
 }
