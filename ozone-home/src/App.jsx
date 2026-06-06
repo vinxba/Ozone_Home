@@ -13,6 +13,8 @@ import FooterCTA from './components/FooterCTA';
 import Footer from './components/Footer';
 import CategoryPage from './pages/CategoryPage';
 import ProductPage from './pages/ProductPage';
+import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage';
 
 function HomePage() {
   return (
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/category/:slug" element={<CategoryPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </div>
     </HashRouter>
