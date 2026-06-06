@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vinxba.github.io/Ozone_Home/",
+        
   "scripts": {
     "dev": "vite",
     "build": "vite build",
