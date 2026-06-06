@@ -1,4 +1,17 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const NAV_LINKS = [
+  { label: "Today's Deals", to: "/" },
+  { label: "Laundry", to: "/category/washing-machines" },
+  { label: "Kitchen", to: "/category/cookers" },
+  { label: "Refrigerators", to: "/category/refrigerators" },
+  { label: "Ovens & Ranges", to: "/category/ovens" },
+  { label: "Hobs", to: "/category/hobs" },
+  { label: "Dryers", to: "/category/dryers" },
+  { label: "Refurbished Guide", to: "/" },
+  { label: "Support", to: "/" },
+];
 
 export default function Navbar() {
   const [cartCount] = useState(2);
@@ -8,14 +21,14 @@ export default function Navbar() {
       {/* Primary bar */}
       <div className="bg-white px-4 lg:px-8 py-3 flex items-center gap-3 lg:gap-6">
         {/* Logo */}
-        <a href="#" className="flex-shrink-0 group">
+        <Link to="/" className="shrink-0 group">
           <div className="text-xl lg:text-2xl font-extrabold tracking-tight text-gray-900 leading-none group-hover:text-emerald-700 transition-colors">
             OzoneHome
           </div>
           <div className="text-[9px] text-emerald-600 font-bold tracking-widest uppercase mt-0.5">
             Certified Refurbished
           </div>
-        </a>
+        </Link>
 
         {/* Search */}
         <div className="flex-1 flex rounded-xl overflow-hidden border-2 border-emerald-600 shadow-sm focus-within:shadow-md focus-within:border-emerald-700 transition-all">
@@ -24,8 +37,9 @@ export default function Navbar() {
             <option>Laundry</option>
             <option>Kitchen</option>
             <option>Refrigerators</option>
-            <option>Dishwashers</option>
             <option>Ovens & Ranges</option>
+            <option>Hobs</option>
+            <option>Dryers</option>
           </select>
           <input
             type="text"
@@ -40,7 +54,7 @@ export default function Navbar() {
         </div>
 
         {/* Right actions */}
-        <div className="flex items-center gap-1 flex-shrink-0">
+        <div className="flex items-center gap-1 shrink-0">
           <button className="hidden lg:flex flex-col items-start px-3 py-2 hover:bg-gray-50 rounded-xl transition-colors text-left">
             <span className="text-[10px] text-gray-400">Hello, Sign in</span>
             <span className="text-sm font-bold text-gray-800">Account & Lists</span>
@@ -69,16 +83,20 @@ export default function Navbar() {
       {/* Secondary nav */}
       <div className="bg-gray-900">
         <div className="px-4 lg:px-8 flex items-center overflow-x-auto">
-          <button className="flex items-center gap-2 text-white px-3 py-2.5 hover:bg-white/10 transition-colors whitespace-nowrap font-bold text-sm flex-shrink-0 border-r border-gray-700 mr-2 pr-4">
+          <button className="flex items-center gap-2 text-white px-3 py-2.5 hover:bg-white/10 transition-colors whitespace-nowrap font-bold text-sm shrink-0 border-r border-gray-700 mr-2 pr-4">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             All
           </button>
-          {["Today's Deals", "Laundry", "Kitchen", "Refrigerators", "Ovens & Ranges", "Dishwashers", "Refurbished Guide", "Support", "Blog"].map(item => (
-            <a key={item} href="#" className="text-gray-300 hover:text-white px-3 py-2.5 hover:bg-white/10 transition-colors whitespace-nowrap flex-shrink-0 text-sm">
-              {item}
-            </a>
+          {NAV_LINKS.map(item => (
+            <Link
+              key={item.label}
+              to={item.to}
+              className="text-gray-300 hover:text-white px-3 py-2.5 hover:bg-white/10 transition-colors whitespace-nowrap shrink-0 text-sm"
+            >
+              {item.label}
+            </Link>
           ))}
         </div>
       </div>
