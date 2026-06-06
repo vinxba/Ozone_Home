@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       className="relative h-[600px] flex items-center bg-cover bg-center px-6 md:px-16"
-      style={{ backgroundImage: "url('https://img.magnific.com/free-photo/happy-african-american-young-family-bought-new-house_7861-3095.jpg?semt=ais_hybrid&w=740&q=80')" }}
+      style={{ backgroundImage: "url('https://files.ozone.in/assets/CategoryImages/1374-default.webp')" }}
     >
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 max-w-xl bg-white/20 backdrop-blur-md border border-white/30 p-8 md:p-12 shadow-2xl">
