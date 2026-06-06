@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import FlashSale from './components/FlashSale';
 import Hero from './components/Hero';
@@ -33,7 +33,7 @@ function HomePage() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
         <Navbar />
         <Routes>
@@ -42,6 +42,6 @@ export default function App() {
           <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
